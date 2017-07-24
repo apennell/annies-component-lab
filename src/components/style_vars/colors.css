@@ -1,0 +1,18 @@
+@value --primary-color-lightest: #bfdafa;
+@value --primary-color-light: #a5bce0;
+@value --primary-color: #4276c9;
+@value --primary-color-dark: #305ea8;
+
+@value --white: #ffffff;
+@value --grey-light: #f3f6f9;
+@value --grey: #a5a5a5;
+@value --grey-dark: #2e2e2e;
+@value --black: #000000;
+
+:global(.text-primary) {
+	color: --primary-color;
+}
+
+:global(.text-grey) {
+	color: --grey;
+}

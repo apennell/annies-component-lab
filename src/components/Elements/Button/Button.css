@@ -1,0 +1,185 @@
+@import '../../style_vars/colors.css';
+@import '../../style_vars/typography.css';
+
+/* import paths for global variables */
+@value colors: "../../style_vars/colors.css";
+@value --primary-color, --primary-color-light, --primary-color-dark, --grey-light, --grey, --grey-dark from colors;
+
+@value typography: "../../style_vars/typography.css";
+@value --primary-font from typography;
+
+/* base style for all buttons */
+.button {
+	border-radius: 3px;
+	text-align: center;
+	font-family: --primary-font;
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+}
+
+.button:hover {
+	text-decoration: none;
+}
+
+/* default/secondary button style */
+.normal {
+	composes: button;
+	color: --grey-dark;
+	border: solid 1px --grey-dark;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+.normal:hover {
+	color: --primary-color;
+	border: solid 1px --primary-color;
+}
+
+.normal.disabled, 
+.normal-disabled:hover {
+	color: --grey;
+	border: solid 1px --grey;
+	cursor: not-allowed;
+}
+
+/* colored primary style */
+.primary {
+	composes: button;
+	color: #ffffff;
+	border: solid 1px --primary-color;
+	background-color: --primary-color;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.primary:hover {
+	background-color: --primary-color-dark;
+	border-color: --primary-color-dark;
+	color: #fff;
+}
+
+.primary.disabled, 
+.primary-disabled:hover {
+	border-color: --primary-color-light;
+	background-color: --primary-color-light;
+	cursor: not-allowed;
+}
+
+/* default button style when on dark background */
+.inverse {
+	composes: button;
+	color: #ffffff;
+	border: solid 1px #ffffff;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+.inverse:hover {
+	color: --grey-dark;
+	border: solid 1px --grey-light;
+	background-color: --grey-light;
+}
+
+.inverse.disabled, 
+.inverse.disabled:hover {
+	color: --grey;
+	border: solid 1px --grey;
+	background-color: transparent;
+	cursor: not-allowed;
+}
+
+/* sizing */
+.normalSize {
+	font-size: 12px;
+	padding: 7px 20px;
+	line-height: 16px;
+}
+
+.largeSize {
+	font-size: 16px;
+	padding: 12px 20px;
+	line-height: 22px;
+}
+
+/* full width */
+.block {
+	display: block;
+	width: 100%;
+}
+
+/* style button to look like text link */
+.textLink {
+	composes: button;
+	color: --primary-color;
+	background-color: transparent;
+	border: none;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.textLink:hover {
+	text-decoration: underline;
+	color: --primary-color-dark;
+}
+
+.textLink.disabled {
+	color: --grey;
+	cursor: not-allowed;
+}
+
+.textLink.disabled:hover {
+	text-decoration: none;
+}
+
+/* ==== loading styles ==== */
+.loading {
+	composes: button;
+	color: transparent;
+	pointer-events: none;
+}
+
+/* create the spinner icon base properties */
+.loading:after {
+	left: 50%;
+	position: absolute;
+	animation: spin 500ms infinite linear;
+	border-radius: 290486px;
+	content: "";
+	display: block;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* spinner icon size props based on button size */
+.normalSize.loading:after {
+	height: 12px;
+	width: 12px;
+	margin-left: -6px;
+	margin-right: 6px;
+	top: 6px;
+}
+
+.largeSize.loading:after {
+	height: 16px;
+	width: 16px;
+	margin-left: -8px;
+	margin-right: 8px;
+	top: 12px;
+}
+
+/* create spinner icon display based on button color */
+.normal.loading:after {
+	border: 2px solid;
+	border-color: transparent transparent --grey --grey;
+}
+
+.primary.loading:after, 
+.inverse.loading:after {
+	border: 2px solid;
+	border-color: transparent transparent #fff #fff;
+}
+/* ==== /loading styles ==== */

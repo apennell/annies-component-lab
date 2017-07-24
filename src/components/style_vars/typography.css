@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i');
+
+@value --primary-font: 'Open Sans', sans-serif;
+
+/* import paths for global variables */
+@value colors: "./colors.css";
+@value --grey, --grey-dark, --primary-color, --primary-color-dark from colors;
+
+:global(h1),
+:global(h2),
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6),
+:global(p),
+:global(li) {
+	color: --grey-dark;
+}
+
+:global(h1),
+:global(h1 a) {
+	font-family: --primary-font;
+	font-size: 42px;
+	line-height: 54px;
+	font-weight: bold;
+	margin: 0;
+}
+
+:global(h2),
+:global(h2 a) {
+	font-family: --primary-font;
+	font-size: 36px;
+	line-height: 40px;
+	font-weight: bold;
+	margin: 0;
+}
+
+:global(h3),
+:global(h3 a) {
+	font-family: --primary-font;
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: bold;
+	margin: 0;
+}
+
+:global(h4),
+:global(h5),
+:global(h6),
+:global(h4),
+:global(h5),
+:global(h6),
+:global(h4 a),
+:global(h5 a),
+:global(h6 a),
+:global(h4 a),
+:global(h5 a),
+:global(h6 a) {
+	font-family: --primary-font;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	margin: 0;
+}
+
+:global(p),
+:global(li),
+:global(p a),
+:global(li a)  {
+	font-family: --primary-font;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0;
+}
+
+:global(a) {
+	font-family: --primary-font;
+	font-size: 14px;
+	color: --primary-color;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+:global(a h1),
+:global(a h2),
+:global(a h3),
+:global(a h4),
+:global(a h5),
+:global(a h6),
+:global(a p),
+:global(a li) {
+	color: --primary-color;
+}
+
+:global(a:hover),
+:global(a h1:hover),
+:global(a h2:hover),
+:global(a h3:hover),
+:global(a h4:hover),
+:global(a h5:hover),
+:global(a h6:hover),
+:global(a p:hover),
+:global(a li:hover)  {
+	text-decoration: underline;
+	color: --primary-color-dark;
+}
+
+:global(a.disabled) {
+	color: --grey;
+	cursor: not-allowed;
+}
+
+:global(a.disabled:hover) {
+	text-decoration: none;
+}
+
+:global(.weight-light) {
+	font-weight: 300;
+}
+
+:global(.weight-normal) {
+	font-weight: 400;
+}
+
+:global(.weight-bold) {
+	font-weight: 700;
+}
+
+:global(.italic-text) {
+	font-style: italic;
+}
+
+:global(blockquote) {
+	border-left: 5px solid --grey;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+:global(blockquote > p) {
+	font-size: 18px;
+	line-height: 26px;
+}
+
+:global(ul.nested-list) {
+	list-style: none;
+	padding-left: 0;
+}
+
+:global(ul.nested-list > li) {
+	margin-left: 15px;
+}
+
+:global(ul.nested-list > li::before) {
+	content: "⁃";
+	padding-right: 15px;
+}
