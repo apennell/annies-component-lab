@@ -1,0 +1,54 @@
+.identitySection {
+	margin-bottom: 35px;
+}
+
+.colorSection {
+	margin-bottom: 20px;
+	min-height: 82px;
+}
+
+.typographyTitle {
+	margin-bottom: 15px;
+}
+
+.colorSwatch {
+	width: 70px;
+	height: 70px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+	border: solid 6px #ffffff;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.primaryColorLight {
+	background-color: #a5bce0;
+}
+
+.primaryColor {
+	background-color: #4276c9;
+}
+
+.primaryColorDark {
+	background-color: #305ea8;
+}
+
+.white {
+	background-color: #fff;
+}
+
+.greyLight {
+	background-color: #f3f6f9;
+}
+
+.grey {
+	background-color: #a5a5a5;
+}
+
+.greyDark {
+	background-color: #2e2e2e;
+}
+
+.black {
+	background-color: #000000;
+}
