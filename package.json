@@ -32,6 +32,7 @@
     "promise": "7.1.1",
     "react": "^15.6.1",
     "react-dev-utils": "^3.0.2",
+    "react-docgen": "^2.17.0",
     "react-dom": "^15.6.1",
     "react-error-overlay": "^1.0.9",
     "style-loader": "0.18.2",
@@ -42,7 +43,9 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "react-styleguidist": "^5.5.9"
+  },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
