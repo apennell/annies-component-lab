@@ -75,7 +75,7 @@ To [include the component lab's components](##implementing-the-components) into 
 
 ```
   "dependencies": {
-    "component-lab": "https://github.com/apennell/annies-component-lab.git#master"
+    "annies-component-lab": "https://github.com/apennell/annies-component-lab.git#master"
   }
 ```
 
