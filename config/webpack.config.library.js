@@ -40,7 +40,7 @@ const shouldUseRelativeAssetPaths = publicPath === './';
 const publicUrl = publicPath.slice(0, -1);
 // Get environment variables to inject into our app.
 
-const cssFilename = 'static/css/[name].[contenthash:8].css';
+const cssFilename = 'static/css/annies-lab.css';
 
 // ExtractTextPlugin expects the build output to be flat.
 // (See https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/27)
