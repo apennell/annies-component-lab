@@ -19,7 +19,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "prettier": "^2.1.2",
-    "react-styleguidist": "^11.1.0",
+    "react-styleguidist": "^11.2.0",
     "styled-components": "^5.2.0",
     "webpack": "^5.0.0"
   },
